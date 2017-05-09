@@ -9,12 +9,11 @@ import com.ssinitsa.training.culinary.datamodel.User;
 public interface IUserService {
 
 	User get(Integer id);
+	
+	User getByLogin(String login);
 
 	@Transactional
 	void save(User user);
-
-	@Transactional
-	void saveMultiple(User... User);
 
 	List<User> getAll();
 

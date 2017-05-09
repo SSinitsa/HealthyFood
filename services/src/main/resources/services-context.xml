@@ -8,7 +8,7 @@
 	    http://www.springframework.org/schema/context/spring-context-3.0.xsd"
 >
 	<import resource="classpath:dao-context.xml" />
-	<context:component-scan base-package="com.ssinitsa.training.culinary.services.impl" />
+	<context:component-scan base-package="com.ssinitsa.training.culinary.services" />
 	<context:property-placeholder
 		ignore-unresolvable="true" location="classpath:app.properties" />
 </beans>

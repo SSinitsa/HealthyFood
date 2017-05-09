@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ssinitsa.training.culinary.datamodel.Feedback;
+import com.ssinitsa.training.culinary.datamodel.RecipeWithFeedback;
 
 public interface IFeedbackService {
 
@@ -13,11 +14,10 @@ public interface IFeedbackService {
 	@Transactional
 	void save(Feedback feedback);
 
-	@Transactional
-	void saveMultiple(Feedback... recipe);
-
-	List<Feedback> getAll();
-
+	//List<Feedback> getAll();
+	
 	@Transactional
 	void delete(Integer id);
+
+	List<RecipeWithFeedback> getRecipeWithFedback(Integer id);
 }

@@ -1,0 +1,80 @@
+16:00:18.779 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context-test.xml]
+16:00:18.888 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context.xml]
+16:00:18.935 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dao-context.xml]
+16:00:19.122 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
+16:00:19.122 [main] INFO  org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:19 MSK 2017]; root of context hierarchy
+16:00:19.278 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [db.properties]
+16:00:19.278 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [app.properties]
+16:00:19.294 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+16:00:19.621 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=331, name=Ingredient150787, calories=138, fats=4.97, proteins=1.93, carbohydrates=1.56, category=fruit]
+16:00:19.621 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=332, name=Ingredient928044, calories=138, fats=3.82, proteins=0.9, carbohydrates=2.26, category=fruit]
+16:00:19.777 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=331
+16:00:19.793 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=332
+16:00:19.794 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=333, name=Ingredient417460, calories=13, fats=2.22, proteins=3.99, carbohydrates=4.05, category=fruit]
+16:00:19.794 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=334, name=Ingredient276858, calories=48, fats=3.91, proteins=3.9, carbohydrates=0.18, category=fruit]
+16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=333
+16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=334
+16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=335, name=Ingredient937475, calories=55, fats=2.26, proteins=4.63, carbohydrates=1.86, category=fruit]
+16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=336, name=Ingredient357404, calories=151, fats=3.81, proteins=3.88, carbohydrates=1.62, category=fruit]
+16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Update Ingredient: Ingredient [id=335, name=Updated ingredient, calories=52, fats=1.51, proteins=2.39, carbohydrates=4.09, category=vegetable]
+16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=335
+16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=336
+16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=337, name=Ingredient260476, calories=95, fats=3.2, proteins=1.39, carbohydrates=0.22, category=fruit]
+16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=338, name=Ingredient787570, calories=81, fats=0.87, proteins=4.65, carbohydrates=3.75, category=fruit]
+16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=337
+16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=338
+16:00:19.934 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=339, name=Ingredient894597, calories=10, fats=2.15, proteins=1.78, carbohydrates=3.63, category=fruit]
+16:00:19.934 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=340, name=Ingredient275959, calories=136, fats=1.87, proteins=4.35, carbohydrates=1.83, category=fruit]
+16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=339
+16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=340
+16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=341, name=Ingredient252892, calories=182, fats=4.7, proteins=1.79, carbohydrates=0.3, category=fruit]
+16:00:19.997 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=342, name=Ingredient99359, calories=40, fats=0.85, proteins=1.73, carbohydrates=4.53, category=fruit]
+16:00:20.012 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=341
+16:00:20.028 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=342
+16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=343, name=Ingredient952257, calories=190, fats=1.35, proteins=0.58, carbohydrates=1.02, category=fruit]
+16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=344, name=Ingredient685509, calories=179, fats=0.99, proteins=4.66, carbohydrates=3.5, category=fruit]
+16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=345, name=Ingredient166520, calories=72, fats=2.93, proteins=3.48, carbohydrates=3.14, category=fruit]
+16:00:20.075 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=343
+16:00:20.090 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=344
+16:00:20.106 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=345
+16:00:27.614 [main] INFO  org.springframework.test.context.TestContextManager - Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
+16:00:27.817 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context-test.xml]
+16:00:27.911 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context.xml]
+16:00:27.958 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dao-context.xml]
+16:00:28.129 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
+16:00:28.129 [main] INFO  org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:28 MSK 2017]; root of context hierarchy
+16:00:28.270 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [db.properties]
+16:00:28.285 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [app.properties]
+16:00:28.285 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+16:00:28.675 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=346, name=Ingredient690878, calories=188, fats=3.28, proteins=2.42, carbohydrates=1.38, category=fruit]
+16:00:28.693 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=347, name=Ingredient492897, calories=47, fats=0.39, proteins=2.83, carbohydrates=0.08, category=fruit]
+16:00:28.850 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=346
+16:00:28.850 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=347
+16:00:28.865 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=348, name=Ingredient4228, calories=159, fats=0.32, proteins=4.03, carbohydrates=3.68, category=fruit]
+16:00:28.865 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=349, name=Ingredient189271, calories=138, fats=0.74, proteins=4.31, carbohydrates=1.4, category=fruit]
+16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=348
+16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=349
+16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=350, name=Ingredient869227, calories=32, fats=0.58, proteins=0.69, carbohydrates=1.78, category=fruit]
+16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=351, name=Ingredient274788, calories=127, fats=2.01, proteins=1.65, carbohydrates=0.16, category=fruit]
+16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Update Ingredient: Ingredient [id=350, name=Updated ingredient, calories=167, fats=0.39, proteins=0.18, carbohydrates=1.25, category=vegetable]
+16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=350
+16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=351
+16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=352, name=Ingredient88934, calories=161, fats=4.37, proteins=1.32, carbohydrates=4.09, category=fruit]
+16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=353, name=Ingredient97631, calories=195, fats=0.45, proteins=3.3, carbohydrates=3.47, category=fruit]
+16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=352
+16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=353
+16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=354, name=Ingredient169739, calories=195, fats=1.25, proteins=2.42, carbohydrates=3.5, category=fruit]
+16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=355, name=Ingredient582921, calories=100, fats=3.5, proteins=1.41, carbohydrates=2.95, category=fruit]
+16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=354
+16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=355
+16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=356, name=Ingredient525677, calories=44, fats=3.97, proteins=0.45, carbohydrates=4.45, category=fruit]
+16:00:29.053 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=357, name=Ingredient92761, calories=95, fats=2.19, proteins=2.92, carbohydrates=0.26, category=fruit]
+16:00:29.099 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=356
+16:00:29.099 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=357
+16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=358, name=Ingredient537678, calories=135, fats=4.33, proteins=0.52, carbohydrates=4.47, category=fruit]
+16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=359, name=Ingredient754910, calories=31, fats=3.19, proteins=1.11, carbohydrates=4.76, category=fruit]
+16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=360, name=Ingredient292576, calories=121, fats=2.62, proteins=4.94, carbohydrates=3.6, category=fruit]
+16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=358
+16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=359
+16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=360
+16:00:29.162 [Thread-1] INFO  org.springframework.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:28 MSK 2017]; root of context hierarchy
