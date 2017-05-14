@@ -23,22 +23,12 @@ import com.ssinitsa.training.culinary.datamodel.Feedback;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithFeedback;
 
 @Repository
-public class FeedbackDaoImpl implements IFeedbackDao {
+public class FeedbackDaoImpl extends GenericDaoImpl<Feedback> implements IFeedbackDao {
 	
 	private final static Logger LOGGER = LoggerFactory.getLogger(FeedbackDaoImpl.class);
 	
 	@Inject
 	private JdbcTemplate jdbcTemplate;
-
-	@Override
-	public Feedback get(Integer id) {
-		try {
-			return jdbcTemplate.queryForObject("select * from feedback where id = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<Feedback>(Feedback.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
 
 	@Override
 	public Feedback insert(Feedback entity) {
@@ -61,18 +51,6 @@ public class FeedbackDaoImpl implements IFeedbackDao {
 		return entity;
 	}
 
-	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from feedback where id=" + id);
-
-	}
-
-	@Override
-	public List<Feedback> getAll() {
-		List<Feedback> rs = jdbcTemplate.query("select * from feedback ",
-				new BeanPropertyRowMapper<Feedback>(Feedback.class));
-		return rs;
-	}
 
 	@Override
 	public void update(Feedback feedback) {
@@ -99,5 +77,11 @@ public class FeedbackDaoImpl implements IFeedbackDao {
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
+	}
+	
+	@Override
+	public void clearFeedbacks(Integer recipeId) {
+		jdbcTemplate.update("delete from feedback where recipe_id=" + recipeId);
+		
 	}
 }

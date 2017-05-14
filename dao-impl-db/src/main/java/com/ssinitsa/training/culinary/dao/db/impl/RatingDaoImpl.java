@@ -23,22 +23,13 @@ import com.ssinitsa.training.culinary.datamodel.Rating;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithRating;
 
 @Repository
-public class RatingDaoImpl implements IRatingDao {
+public class RatingDaoImpl extends GenericDaoImpl<Rating> implements IRatingDao {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(RatingDaoImpl.class);
 
 	@Inject
 	private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public Rating get(Integer id) {
-		try {
-			return jdbcTemplate.queryForObject("select * from rating where id = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<Rating>(Rating.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
 
 	@Override
 	public Rating insert(Rating entity) {
@@ -60,17 +51,6 @@ public class RatingDaoImpl implements IRatingDao {
 		return entity;
 	}
 
-	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from rating where id=" + id);
-
-	}
-
-	@Override
-	public List<Rating> getAll() {
-		List<Rating> rs = jdbcTemplate.query("select * from rating ", new BeanPropertyRowMapper<Rating>(Rating.class));
-		return rs;
-	}
 
 	@Override
 	public void update(Rating rating) {

@@ -10,7 +10,7 @@ public interface IUserService {
 
 	User get(Integer id);
 	
-	User getByLogin(String login);
+	Integer getByLogin(String login);
 
 	@Transactional
 	void save(User user);
@@ -19,4 +19,5 @@ public interface IUserService {
 
 	@Transactional
 	void delete(Integer id);
+	
 }

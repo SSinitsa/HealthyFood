@@ -3,7 +3,6 @@ package com.ssinitsa.training.culinary.dao.db.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -19,25 +18,16 @@ import com.ssinitsa.training.culinary.dao.api.IUserDao;
 import com.ssinitsa.training.culinary.datamodel.User;
 
 @Repository
-public class UserDaoImpl implements IUserDao {
+public class UserDaoImpl extends GenericDaoImpl<User> implements IUserDao {
+	
 	@Inject
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public User get(Integer id) {
+	public Integer getByLogin(String login){
 		try {
-			return jdbcTemplate.queryForObject("select * from \"user\" where \"id\" = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<User>(User.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
-	
-	@Override
-	public User getByLogin(String login){
-		try {
-			return jdbcTemplate.queryForObject("select * from \"user\" where \"login\" = ? ", new Object[] { login },
-					new BeanPropertyRowMapper<User>(User.class));
+			return jdbcTemplate.queryForObject("select \"id\" from \"user\" where \"login\" = ? ", new Object[] { login },
+					new BeanPropertyRowMapper<User>(User.class)).getId();
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
@@ -67,17 +57,6 @@ public class UserDaoImpl implements IUserDao {
 		return entity;
 	}
 
-	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from \"user\" where \"id\"=" + id);
-
-	}
-
-	@Override
-	public List<User> getAll() {
-		List<User> rs = jdbcTemplate.query("select * from \"user\" ", new BeanPropertyRowMapper<User>(User.class));
-		return rs;
-	}
 
 	@Override
 	public void update(User user) {

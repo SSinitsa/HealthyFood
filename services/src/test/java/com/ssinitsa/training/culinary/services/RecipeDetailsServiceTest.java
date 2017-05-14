@@ -18,8 +18,7 @@ import com.ssinitsa.training.culinary.datamodel.Recipe;
 import com.ssinitsa.training.culinary.datamodel.RecipeDetails;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 import com.ssinitsa.training.culinary.datamodel.User;
-
-import models.AverageRecipeValues;
+import com.ssinitsa.training.culinary.services.models.AverageRecipeValues;
 
 public class RecipeDetailsServiceTest extends AbstractTest {
 

@@ -2,14 +2,26 @@ package com.ssinitsa.training.culinary.datamodel;
 
 import java.sql.Timestamp;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 public class User {
+	
 	private Integer id;
+	
 	private String login;
+	
 	private String password;
+	
 	private Timestamp registrated;
+	
 	private String firstName;
+	
 	private String lastName;
+	
 	private String email;
+	
 	private UserRole role;
 
 	public Integer getId() {

@@ -15,8 +15,7 @@ import com.ssinitsa.training.culinary.dao.api.IRecipeDetailsDao;
 import com.ssinitsa.training.culinary.datamodel.RecipeDetails;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 import com.ssinitsa.training.culinary.services.IRecipeDetailsService;
-
-import models.AverageRecipeValues;
+import com.ssinitsa.training.culinary.services.models.AverageRecipeValues;
 
 @Service
 public class RecipeDetailsServiceImpl implements IRecipeDetailsService {

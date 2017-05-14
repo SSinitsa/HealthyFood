@@ -47,7 +47,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void getTest() {
-		LOGGER.debug("Ingredient getTest");
+		LOGGER.info("Ingredient getTest");
 		Ingredient ingredientFromDb = ingredientService.get(savedIngredientId);
 		Assert.notNull(ingredientFromDb, "Ingredient must be exist");
 		Assert.isTrue(!hasEmptyField(ingredientFromDb), "Ingredient should'nt have empty columns");
@@ -55,7 +55,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void insertTest() {
-		LOGGER.debug("Ingredient insertTest");
+		LOGGER.info("Ingredient insertTest");
 		Ingredient newIngredient2 = createEntity(new Ingredient());
 		ingredientService.save(newIngredient2);
 		savedIngredientId2 = newIngredient2.getId();
@@ -66,7 +66,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void updateTest() {
-		LOGGER.debug("Ingredient updateTest");
+		LOGGER.info("Ingredient updateTest");
 		Ingredient updatingIngredient = createEntity(new Ingredient());
 		updatingIngredient.setId(savedIngredientId);
 		updatingIngredient.setCategory(IngredientCategory.vegetable);
@@ -83,7 +83,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void getAllTest() {
-		LOGGER.debug("Ingredient getAllTest");
+		LOGGER.info("Ingredient getAllTest");
 		Ingredient newIngredient2 = createEntity(new Ingredient());
 		ingredientService.save(newIngredient2);
 		savedIngredientId2 = newIngredient2.getId();
@@ -94,7 +94,7 @@ public class IngredientServiceTest extends AbstractTest {
 	
 	@Test
 	public void deleteTest(){
-		LOGGER.debug("Ingredient deleteTest");
+		LOGGER.info("Ingredient deleteTest");
 		ingredientService.delete(savedIngredientId);
 		Ingredient ingredientFromDb = ingredientService.get(savedIngredientId);
 		Assert.isNull(ingredientFromDb, "Ingredient must not exist");
@@ -102,7 +102,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void getByCategoryTest() {
-		LOGGER.debug("Ingredient getByCategoryTest, category = fruit");
+		LOGGER.info("Ingredient getByCategoryTest, category = fruit");
 		List<Ingredient> ingredients = ingredientService.getByCategory("fruit");
 		Assert.notEmpty(ingredients);
 		for (Ingredient ingredient : ingredients) {
@@ -112,7 +112,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void orderByNameTest() {
-		LOGGER.debug("Ingredient orderByNameTest");
+		LOGGER.info("Ingredient orderByNameTest");
 		List<Ingredient> ingredients = ingredientService.getAll();
 		Collections.sort(ingredients, ingredientService.orderBy("name"));
 		Assert.isTrue((((ingredients.get(0).getName()).compareTo(ingredients.get(1).getName()))<=0), "The next Name column should be higher than the previous one.");
@@ -120,7 +120,7 @@ public class IngredientServiceTest extends AbstractTest {
 
 	@Test
 	public void descendingOrderByCaloriesTest() {
-
+		LOGGER.info("Ingredient descendingOrderByCaloriesTest");
 		List<Ingredient> ingredients = ingredientService.getAll();
 		Collections.sort(ingredients, ingredientService.descendingOrderBy("calories"));
 		Assert.isTrue((ingredients.get(0).getCalories()>=ingredients.get(1).getCalories()), "The next Calories column should be less than the previous one");

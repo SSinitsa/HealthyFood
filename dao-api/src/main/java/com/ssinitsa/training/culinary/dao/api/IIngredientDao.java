@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ssinitsa.training.culinary.datamodel.Ingredient;
 
-public interface IIngredientDao {
+public interface IIngredientDao extends IGenericDao<Ingredient>{
 
 	Ingredient get(Integer id);
 	

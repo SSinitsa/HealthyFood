@@ -20,4 +20,7 @@ public interface IFeedbackService {
 	void delete(Integer id);
 
 	List<RecipeWithFeedback> getRecipeWithFedback(Integer id);
+	
+	@Transactional
+	void clearFeedbacks(Integer recipeId);
 }

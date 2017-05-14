@@ -76,6 +76,7 @@ public class IngredientController {
 
 	private IngredientModel entity2model(Ingredient ingredient) {
 		IngredientModel ingredientModel = new IngredientModel();
+		ingredientModel.setId(ingredient.getId());
 		ingredientModel.setName(ingredient.getName());
 		ingredientModel.setCalories(ingredient.getCalories());
 		ingredientModel.setFats(ingredient.getFats());

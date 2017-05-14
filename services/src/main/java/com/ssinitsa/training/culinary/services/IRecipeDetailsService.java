@@ -6,8 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ssinitsa.training.culinary.datamodel.RecipeDetails;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
-
-import models.AverageRecipeValues;
+import com.ssinitsa.training.culinary.services.models.AverageRecipeValues;
 
 public interface IRecipeDetailsService {
 

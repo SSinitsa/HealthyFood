@@ -17,12 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ssinitsa.training.culinary.datamodel.RecipeDetails;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 import com.ssinitsa.training.culinary.services.IRecipeDetailsService;
+import com.ssinitsa.training.culinary.services.models.AverageRecipeValues;
 import com.ssinitsa.training.culinary.webapp.models.DetailsModel;
 import com.ssinitsa.training.culinary.webapp.models.IdModel;
 import com.ssinitsa.training.culinary.webapp.models.RecipeDetailsModel;
 import com.ssinitsa.training.culinary.webapp.models.RecipeValuesModel;
-
-import models.AverageRecipeValues;
 
 @RestController
 @RequestMapping("/details")

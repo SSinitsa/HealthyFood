@@ -22,7 +22,7 @@ import com.ssinitsa.training.culinary.datamodel.RecipeDetails;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 
 @Repository
-public class RecipeDetailsDaoImpl implements IRecipeDetailsDao {
+public class RecipeDetailsDaoImpl extends GenericDaoImpl<RecipeDetails> implements IRecipeDetailsDao {
 
 	@Inject
 	private JdbcTemplate jdbcTemplate;
@@ -60,18 +60,6 @@ public class RecipeDetailsDaoImpl implements IRecipeDetailsDao {
 	}
 
 	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from recipe_details where id=" + id);
-
-	}
-
-	/*
-	 * @Override public List<RecipeDetails> getAll() { List<RecipeDetails> rs =
-	 * jdbcTemplate.query("select * from recipe_details ", new
-	 * BeanPropertyRowMapper<RecipeDetails>(RecipeDetails.class)); return rs; }
-	 */
-
-	@Override
 	public void update(RecipeDetails recipeDetails) {
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			@Override
@@ -88,15 +76,6 @@ public class RecipeDetailsDaoImpl implements IRecipeDetailsDao {
 
 	}
 
-	@Override
-	public RecipeDetails get(Integer id) {
-		try {
-			return jdbcTemplate.queryForObject("select * from recipe_details where id = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<RecipeDetails>(RecipeDetails.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
 
 	@Override
 	public List<RecipeDetails> getByRecipeId(Integer id) {

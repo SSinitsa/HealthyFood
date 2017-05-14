@@ -57,4 +57,9 @@ public class FeedbackServiceImpl implements IFeedbackService {
 	public List<RecipeWithFeedback> getRecipeWithFedback(Integer id) {
 		return feedbackDao.getRecipeWithFeedback(id);
 	}
+
+	@Override
+	public void clearFeedbacks(Integer recipeId) {
+		feedbackDao.clearFeedbacks(recipeId);
+	}
 }

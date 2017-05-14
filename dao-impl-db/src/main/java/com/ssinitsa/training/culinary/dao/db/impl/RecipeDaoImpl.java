@@ -8,7 +8,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -19,23 +18,13 @@ import org.springframework.stereotype.Repository;
 import com.ssinitsa.training.culinary.dao.api.IRecipeDao;
 import com.ssinitsa.training.culinary.dao.api.filter.RecipeFilter;
 import com.ssinitsa.training.culinary.datamodel.Recipe;
-import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 
 @Repository
-public class RecipeDaoImpl implements IRecipeDao {
+public class RecipeDaoImpl extends GenericDaoImpl<Recipe> implements IRecipeDao {
 
 	@Inject
 	private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public Recipe get(Integer id) {
-		try {
-			return jdbcTemplate.queryForObject("select * from recipe where id = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<Recipe>(Recipe.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
 
 	@Override
 	public Recipe insert(Recipe entity) {
@@ -60,17 +49,6 @@ public class RecipeDaoImpl implements IRecipeDao {
 		return entity;
 	}
 
-	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from recipe where id=" + id);
-
-	}
-
-	@Override
-	public List<Recipe> getAll() {
-		List<Recipe> rs = jdbcTemplate.query("select * from recipe ", new BeanPropertyRowMapper<Recipe>(Recipe.class));
-		return rs;
-	}
 
 	@Override
 	public void update(Recipe recipe) {

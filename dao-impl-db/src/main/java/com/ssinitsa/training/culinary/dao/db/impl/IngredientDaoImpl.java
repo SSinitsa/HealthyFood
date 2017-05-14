@@ -19,25 +19,15 @@ import org.springframework.stereotype.Repository;
 
 import com.ssinitsa.training.culinary.dao.api.IIngredientDao;
 import com.ssinitsa.training.culinary.datamodel.Ingredient;
-import com.ssinitsa.training.culinary.datamodel.IngredientCategory;
 
 @Repository
-public class IngredientDaoImpl implements IIngredientDao {
-	
+public class IngredientDaoImpl extends GenericDaoImpl<Ingredient> implements IIngredientDao {
+
 	private final static Logger LOGGER = LoggerFactory.getLogger(IngredientDaoImpl.class);
-	
+
 	@Inject
 	private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public Ingredient get(Integer id) {
-		try {
-			return jdbcTemplate.queryForObject("select * from ingredient where id = ? ", new Object[] { id },
-					new BeanPropertyRowMapper<Ingredient>(Ingredient.class));
-		} catch (EmptyResultDataAccessException e) {
-			return null;
-		}
-	}
 
 	@Override
 	public Ingredient insert(Ingredient entity) {
@@ -62,18 +52,6 @@ public class IngredientDaoImpl implements IIngredientDao {
 		return entity;
 	}
 
-	@Override
-	public void delete(Integer id) {
-		jdbcTemplate.update("delete from ingredient where id=" + id);
-
-	}
-
-	@Override
-	public List<Ingredient> getAll() {
-		List<Ingredient> rs = jdbcTemplate.query("select * from ingredient ",
-				new BeanPropertyRowMapper<Ingredient>(Ingredient.class));
-		return rs;
-	}
 
 	@Override
 	public void update(Ingredient ingredient) {
@@ -99,12 +77,11 @@ public class IngredientDaoImpl implements IIngredientDao {
 	@Override
 	public List<Ingredient> getByCategory(String category) {
 		try {
-		return (List<Ingredient>) jdbcTemplate.query(
-				"select * from ingredient where category=?",
-				new Object[] { category }, new BeanPropertyRowMapper<Ingredient>(Ingredient.class));
-	} catch (EmptyResultDataAccessException e) {
-		return null;
-	}
+			return (List<Ingredient>) jdbcTemplate.query("select * from ingredient where category=?",
+					new Object[] { category }, new BeanPropertyRowMapper<Ingredient>(Ingredient.class));
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 
 }

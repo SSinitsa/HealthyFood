@@ -1,8 +1,8 @@
 package com.ssinitsa.training.culinary.webapp.models;
 
-import java.util.List;
-
 public class IngredientModel {
+
+	private Integer id;
 
 	private String name;
 
@@ -16,9 +16,12 @@ public class IngredientModel {
 
 	private String category;
 
-	public List<IngredientModel> paginator(Integer page) {
-		
-		return null;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {

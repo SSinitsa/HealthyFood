@@ -1,4 +1,4 @@
-package models;
+package com.ssinitsa.training.culinary.services.models;
 
 import java.math.BigDecimal;
 

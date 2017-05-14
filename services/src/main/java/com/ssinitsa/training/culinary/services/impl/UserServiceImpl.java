@@ -49,9 +49,10 @@ public class UserServiceImpl implements IUserService {
 	}
 
 	@Override
-	public User getByLogin(String login) {
+	public Integer getByLogin(String login) {
 		return userDao.getByLogin(login);
 		
 	}
+
 
 }

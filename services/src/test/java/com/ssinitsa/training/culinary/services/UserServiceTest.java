@@ -102,6 +102,14 @@ public class UserServiceTest extends AbstractTest {
 		Assert.isNull(userFromDb, "User must not exist");
 	}
 	
+	@Test
+	public void getByLoginTest(){
+		
+		Integer userId = userService.getByLogin(newUser.getLogin());
+		Assert.isTrue(userId.equals(savedUserId),"ID must be equals");
+		
+	}
+	
 	/*@Test
 	public void getByLogin(){
 		

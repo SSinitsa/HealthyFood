@@ -15,6 +15,6 @@ public interface IUserDao {
 
 	void delete(Integer id);
 	
-	User getByLogin (String login);
+	Integer getByLogin (String login);
 
 }

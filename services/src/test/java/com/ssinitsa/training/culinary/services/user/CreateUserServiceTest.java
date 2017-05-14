@@ -21,15 +21,11 @@ public class CreateUserServiceTest extends AbstractTest {
 	
 	private Integer savedUserId;
 	
-	@After
-	public void deleteCreatedUser(){
-		service.delete(savedUserId);
-	}
 
 	@Test
 	public void createTest() {
 		User user = new User();
-		user.setLogin("new login");
+		user.setLogin("n");
 		user.setPassword("new password");
 		user.setRegistrated(new Timestamp(new Date().getTime()));
 		user.setFirstName("new FN");
@@ -43,29 +39,6 @@ public class CreateUserServiceTest extends AbstractTest {
 		User userFromDb = service.get(savedUserId);
 		
 		System.out.println (userFromDb.toString());
-
-		Assert.notNull(userFromDb, "user must be saved");
-
-		/*Assert.notNull(ingredientFromDb.getCalories(), "calories column must not me empty");
-
-		Assert.isTrue(ingredientFromDb.getCalories().equals(ingredient.getCalories()), "calories must be equals");
-
-		Assert.notNull(ingredientFromDb.getFats(), "fats column must not me empty");
-
-		Assert.isTrue(ingredientFromDb.getFats() == (ingredient.getFats()), "fats must be equals");
-
-		Assert.notNull(ingredientFromDb.getProteins(), "proteins column must not me empty");
-
-		Assert.isTrue(ingredientFromDb.getProteins() == (ingredient.getProteins()), "proteins must be equals");
-
-		Assert.notNull(ingredientFromDb.getCarbohydrates(), "carbohydrates column must not me empty");
-
-		Assert.isTrue(ingredientFromDb.getCarbohydrates() == (ingredient.getCarbohydrates()),
-				"carbohydrates must be equals");
-
-		Assert.notNull(ingredientFromDb.getCategory(), "category column must not me empty");
-
-		Assert.isTrue(ingredientFromDb.getCategory().equals(ingredient.getCategory()), "category must be equals");*/
 
 	}
 	

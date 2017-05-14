@@ -18,5 +18,7 @@ public interface IFeedbackDao {
 	List<Feedback> getAll();
 
 	void delete(Integer id);
+	
+	void clearFeedbacks(Integer recipeId);
 
 }
