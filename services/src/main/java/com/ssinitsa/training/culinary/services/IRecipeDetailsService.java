@@ -15,9 +15,6 @@ public interface IRecipeDetailsService {
 	@Transactional
 	void save(RecipeDetails recipeDetails);
 
-	/*@Transactional
-	void saveMultiple(RecipeDetails... recipeDetails);*/
-
 	@Transactional
 	void delete(Integer id);
 	

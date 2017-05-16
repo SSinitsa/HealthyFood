@@ -56,6 +56,12 @@ public class RatingController {
 		ratingService.save(rating);
 		return new ResponseEntity<IdModel>(new IdModel(rating.getId()), HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<?> deleteVote(@PathVariable(value = "id") Integer ratingIdParam) {
+		ratingService.delete(ratingIdParam);
+		return new ResponseEntity<IdModel>(HttpStatus.OK);
+	}
 
 	private Rating model2entity(RatingModel ratingModel) {
 		Rating rating = new Rating();

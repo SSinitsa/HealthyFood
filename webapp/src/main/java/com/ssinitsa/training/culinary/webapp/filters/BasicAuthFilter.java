@@ -1,11 +1,8 @@
 package com.ssinitsa.training.culinary.webapp.filters;
 
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Base64;
 import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -21,6 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.ssinitsa.training.culinary.datamodel.User;
+import com.ssinitsa.training.culinary.services.IFeedbackService;
 import com.ssinitsa.training.culinary.services.IRecipeService;
 import com.ssinitsa.training.culinary.services.IUserService;
 import com.ssinitsa.training.culinary.services.impl.UserAuthStorage;
@@ -30,6 +28,8 @@ public class BasicAuthFilter implements Filter {
     private IUserService userService;
     
     private IRecipeService recipeService;
+    
+    private IFeedbackService feedbackService;
     
     private ApplicationContext appContext;
     
@@ -42,7 +42,8 @@ public class BasicAuthFilter implements Filter {
         WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(config
                 .getServletContext());
         userService = context.getBean(IUserService.class);
-        //recipeService = context.getBean(IRecipeService.class);
+        recipeService = context.getBean(IRecipeService.class);
+        feedbackService = context.getBean(IFeedbackService.class);
         appContext = context;
     }
 
@@ -59,10 +60,10 @@ public class BasicAuthFilter implements Filter {
         	res.sendError(401);
         	return;
         }
-        if (isAccessDenied(req)){
+        /*if (isAccessDenied(req)){
         	res.sendError(401);
         	return;
-        }
+        }*/
         
         chain.doFilter(request, response);
 
@@ -97,25 +98,44 @@ public class BasicAuthFilter implements Filter {
 	}
 
 	private boolean isAuthRequired(HttpServletRequest req) {
+		
         if (req.getMethod().toUpperCase().equals("GET")) {
             return false;
+        }
+        if (req.getMethod().toUpperCase().equals("POST")&&req.getRequestURI().startsWith("/auth/registration")){
+        	return false;
+        }
+        if (req.getMethod().toUpperCase().equals("POST")&&req.getRequestURI().startsWith("/auth/login")){
+        	return false;
         }
         return true;
     }
 	
 	private boolean isAccessDenied(HttpServletRequest req){
-		if (req.getMethod().toUpperCase().equals("POST")&&req.getRequestURI().startsWith("/ingredient")&&!userDataStorage.getRole().equals("admin")){
-			return true;
+		
+		if (userDataStorage.getRole().equals("admin")){
+			return false;
 		}
 		
+		if (req.getMethod().toUpperCase().equals("POST")&&req.getRequestURI().startsWith("/ingredient")){
+			return true;
+		}
+		if (req.getMethod().toUpperCase().equals("PUT")&&!userIsAuthor(req.getRequestURI(), userDataStorage.getId())){
+			return true;
+		}
 		return false;
 		
 	}
     
     private boolean userIsAuthor(String requestURI, Integer id) {
   	  Integer indexFrom = requestURI.lastIndexOf("/")+1;
-  	  String indexOfObject = requestURI.substring(indexFrom);
-  	  System.out.println(indexOfObject+" "+id);
+  	  Integer indexOfObject = Integer.parseInt(requestURI.substring(indexFrom));
+  	  if (requestURI.startsWith("/recipes")&&recipeService.get(indexOfObject).getAuthorId()==id){
+  		  return true;
+  	  }
+  	  if (requestURI.startsWith("/feedbacks")&&feedbackService.get(indexOfObject).getUserId()==id){
+		  return true;
+	  }
   		return true;
   	}
 

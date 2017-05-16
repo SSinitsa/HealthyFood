@@ -1,0 +1,14 @@
+<com.ssinitsa.training.culinary.dao.xml.impl.wrapper.XmlModelWrapper>
+  <rows>
+    <com.ssinitsa.training.culinary.datamodel.Ingredient>
+      <id>1</id>
+      <name>new ingredient</name>
+      <calories>2</calories>
+      <fats>0.1</fats>
+      <proteins>0.2</proteins>
+      <carbohydrates>0.3</carbohydrates>
+      <category>meat</category>
+    </com.ssinitsa.training.culinary.datamodel.Ingredient>
+  </rows>
+  <lastId class="int">1</lastId>
+</com.ssinitsa.training.culinary.dao.xml.impl.wrapper.XmlModelWrapper>

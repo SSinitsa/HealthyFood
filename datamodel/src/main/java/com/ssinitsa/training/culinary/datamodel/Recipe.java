@@ -2,7 +2,10 @@ package com.ssinitsa.training.culinary.datamodel;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Recipe {
+
 	private Integer id;
 	private String name;
 	private String description;
@@ -10,6 +13,22 @@ public class Recipe {
 	private Timestamp created;
 	private DishCategory category;
 	private Boolean vegetarian;
+
+	public Recipe(Integer id, String name, String description, Integer authorId, Timestamp created,
+			DishCategory category, Boolean vegetarian) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.authorId = authorId;
+		this.created = created;
+		this.category = category;
+		this.vegetarian = vegetarian;
+	}
+
+	public Recipe() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;

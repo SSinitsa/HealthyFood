@@ -2,6 +2,7 @@ package com.ssinitsa.training.culinary.webapp.models;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ssinitsa.training.culinary.datamodel.DishCategory;
 
 public class RecipeModel {
@@ -13,7 +14,7 @@ public class RecipeModel {
 	private String description;
 
 	private Integer authorId;
-
+	@JsonIgnore
 	private String author;
 
 	private Timestamp created;

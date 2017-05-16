@@ -1,6 +1,8 @@
 package com.ssinitsa.training.culinary.webapp.models;
 
 public class UserModel {
+	
+	private Integer id;
 
 	private String login;
 
@@ -50,6 +52,14 @@ public class UserModel {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

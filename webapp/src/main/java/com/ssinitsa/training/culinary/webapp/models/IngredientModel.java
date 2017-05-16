@@ -1,19 +1,16 @@
 package com.ssinitsa.training.culinary.webapp.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ssinitsa.training.culinary.datamodel.IngredientCategory;
+
 public class IngredientModel {
-
+	
 	private Integer id;
-
 	private String name;
-
 	private Integer calories;
-
 	private Double fats;
-
 	private Double proteins;
-
 	private Double carbohydrates;
-
 	private String category;
 
 	public Integer getId() {
@@ -36,6 +33,7 @@ public class IngredientModel {
 		return calories;
 	}
 
+	
 	public void setCalories(Integer calories) {
 		this.calories = calories;
 	}
@@ -71,5 +69,4 @@ public class IngredientModel {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
 }

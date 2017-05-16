@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ssinitsa.training.culinary.datamodel.Feedback;
 import com.ssinitsa.training.culinary.datamodel.RecipeWithFeedback;
 import com.ssinitsa.training.culinary.services.IFeedbackService;
+import com.ssinitsa.training.culinary.webapp.converters.Feedback2FeedbackModel;
+import com.ssinitsa.training.culinary.webapp.converters.FeedbackModel2Feedack;
 import com.ssinitsa.training.culinary.webapp.models.FeedbackModel;
 import com.ssinitsa.training.culinary.webapp.models.IdModel;
 
@@ -27,6 +29,12 @@ public class FeedbackController {
 
 	@Inject
 	private IFeedbackService feedbackService;
+	
+	@Inject
+	private Feedback2FeedbackModel entityConverter;
+	
+	@Inject
+	private FeedbackModel2Feedack modelConverter;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public HttpStatus getStatus() {

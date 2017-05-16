@@ -14,7 +14,10 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import com.ssinitsa.training.culinary.dao.api.IUserCache;
 import com.ssinitsa.training.culinary.dao.api.IUserDao;
+import com.ssinitsa.training.culinary.dao.db.cache.UserCache;
+import com.ssinitsa.training.culinary.dao.db.cache.UserCache;
 import com.ssinitsa.training.culinary.datamodel.User;
 
 @Repository
@@ -22,6 +25,9 @@ public class UserDaoImpl extends GenericDaoImpl<User> implements IUserDao {
 	
 	@Inject
 	private JdbcTemplate jdbcTemplate;
+	
+	/*@Inject
+	private UserCache userCache;*/
 
 	@Override
 	public Integer getByLogin(String login){
@@ -77,6 +83,29 @@ public class UserDaoImpl extends GenericDaoImpl<User> implements IUserDao {
 			}
 		});
 
+	}
+
+	@Override
+	public User getUserData(String login, String password) {
+		
+		/*User userFromCache = userCache.get(login);
+		
+		if (userFromCache!=null&&userFromCache.getPassword().equals(password)){
+			return userFromCache;
+		}
+		if (userFromCache!=null&&!userFromCache.getPassword().equals(password)){
+			return null;
+		}*/
+		try {
+			User user = jdbcTemplate.queryForObject("SELECT * FROM \"user\" WHERE \"login\" = ? AND \"password\" = ?", new Object[] { login, password },
+					new BeanPropertyRowMapper<User>(User.class));
+			System.out.println(user.toString());
+			/*userCache.set(user.getLogin(), user);*/
+			return user;
+		} catch (EmptyResultDataAccessException e) {
+			//LOGGER.error("Exception thrown! ", e);
+			return null;
+		}
 	}
 
 }

@@ -15,11 +15,6 @@ public interface IRatingService {
 	@Transactional
 	void save(Rating rating);
 
-	/*@Transactional
-	void saveMultiple(Rating... rating);*/
-
-	//List<Rating> getAll();
-
 	@Transactional
 	void delete(Integer id);
 	

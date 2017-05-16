@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.ssinitsa.training.culinary.dao.api.filter.RecipeFilter;
 import com.ssinitsa.training.culinary.datamodel.Recipe;
-import com.ssinitsa.training.culinary.datamodel.RecipeWithDetails;
 
 public interface IRecipeDao {
 

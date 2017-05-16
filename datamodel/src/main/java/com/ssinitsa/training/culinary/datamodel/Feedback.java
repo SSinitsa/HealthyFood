@@ -2,12 +2,28 @@ package com.ssinitsa.training.culinary.datamodel;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Feedback {
 	private Integer id;
 	private String text;
+	@JsonProperty("authorId")
 	private Integer userId;
 	private Integer recipeId;
 	private Timestamp created;
+
+	public Feedback(Integer id, String text, Integer userId, Integer recipeId, Timestamp created) {
+		super();
+		this.id = id;
+		this.text = text;
+		this.userId = userId;
+		this.recipeId = recipeId;
+		this.created = created;
+	}
+
+	public Feedback() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;

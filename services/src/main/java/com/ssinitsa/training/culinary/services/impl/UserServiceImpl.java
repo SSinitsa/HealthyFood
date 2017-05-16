@@ -34,7 +34,8 @@ public class UserServiceImpl implements IUserService {
 	public void save(User user) {
 		if (user.getId() == null) {
 			userDao.insert(user);
-			LOGGER.info("Insert new user : "+user.toString());
+			LOGGER.info("Insert user : "+user.toString());
+			return;
 		} else {
 			userDao.update(user);
 			LOGGER.info("Update user : "+user.toString());
@@ -52,6 +53,32 @@ public class UserServiceImpl implements IUserService {
 	public Integer getByLogin(String login) {
 		return userDao.getByLogin(login);
 		
+	}
+
+	@Override
+	public User authentification(String login, String password) {
+		LOGGER.info("Authentication attempt from User:"+login);
+		System.out.println(login);
+		System.out.println(password);
+		if (login==null||password==null){
+			LOGGER.info("Login or password is missing");
+			return null;
+		}
+		User authUser;
+		authUser = userDao.getUserData(login, password);
+		
+		return authUser;
+	}
+
+	@Override
+	public void registration(User user) {
+		LOGGER.info("Registration attempt from new User");
+		if (user==null){
+			LOGGER.info("User data for registration is missing");
+			return;
+		}
+		userDao.insert(user);
+		LOGGER.info("User:"+user.getLogin()+" registrated successfully");
 	}
 
 

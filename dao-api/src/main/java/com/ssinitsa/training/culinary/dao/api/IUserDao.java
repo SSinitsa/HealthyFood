@@ -16,5 +16,7 @@ public interface IUserDao {
 	void delete(Integer id);
 	
 	Integer getByLogin (String login);
+	
+	User getUserData (String login, String password);
 
 }

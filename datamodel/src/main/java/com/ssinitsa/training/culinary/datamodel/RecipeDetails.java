@@ -6,6 +6,18 @@ public class RecipeDetails {
 	private Integer ingredientId;
 	private Integer quantity;
 
+	public RecipeDetails(Integer id, Integer recipeId, Integer ingredientId, Integer quantity) {
+		super();
+		this.id = id;
+		this.recipeId = recipeId;
+		this.ingredientId = ingredientId;
+		this.quantity = quantity;
+	}
+
+	public RecipeDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getRecipeId() {
 		return recipeId;
 	}

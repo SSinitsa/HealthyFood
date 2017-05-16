@@ -1,0 +1,39 @@
+2017-05-15 03:23:31 INFO  TestContextManager:234 - Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
+2017-05-15 03:23:31 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [services-context-test.xml]
+2017-05-15 03:23:31 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [services-context.xml]
+2017-05-15 03:23:31 INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [dao-context.xml]
+2017-05-15 03:23:31 INFO  DefaultListableBeanFactory:749 - Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
+2017-05-15 03:23:31 INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4883b407: startup date [Mon May 15 03:23:31 MSK 2017]; root of context hierarchy
+2017-05-15 03:23:32 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2017-05-15 03:23:32 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2017-05-15 03:23:32 INFO  AutowiredAnnotationBeanPostProcessor:141 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2649, name=Ingredient753298, calories=28, fats=2.77, proteins=4.66, carbohydrates=1.17, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:115 - Ingredient orderByNameTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2649
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2650, name=Ingredient79240, calories=29, fats=1.24, proteins=4.74, carbohydrates=4.29, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:123 - Ingredient descendingOrderByCaloriesTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2650
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2651, name=Ingredient371895, calories=40, fats=0.19, proteins=4.94, carbohydrates=0.28, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:69 - Ingredient updateTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:41 - Update Ingredient: Ingredient [id=2651, name=Ingredient505427, calories=178, fats=0.07, proteins=3.67, carbohydrates=4.65, category=vegetable]
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2651
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2652, name=Ingredient18762, calories=22, fats=2.88, proteins=4.18, carbohydrates=3.42, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:50 - Ingredient getTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2652
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2653, name=Ingredient865253, calories=98, fats=4.75, proteins=0.04, carbohydrates=3.24, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:86 - Ingredient getAllTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2654, name=Ingredient356346, calories=140, fats=3.32, proteins=4.17, carbohydrates=2.46, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2653
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2654
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2655, name=Ingredient9982, calories=151, fats=3.86, proteins=1.28, carbohydrates=2.4, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:58 - Ingredient insertTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2656, name=Ingredient319024, calories=21, fats=4.76, proteins=2.18, carbohydrates=2.12, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2655
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2656
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2657, name=Ingredient548381, calories=60, fats=0.31, proteins=1.38, carbohydrates=3.24, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:105 - Ingredient getByCategoryTest, category = fruit
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2657
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2658, name=Ingredient514780, calories=38, fats=2.01, proteins=2.44, carbohydrates=1.01, category=fruit]
+2017-05-15 03:23:32 INFO  IngredientServiceTest:97 - Ingredient deleteTest
+2017-05-15 03:23:32 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2658
+2017-05-15 03:23:32 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4883b407: startup date [Mon May 15 03:23:31 MSK 2017]; root of context hierarchy

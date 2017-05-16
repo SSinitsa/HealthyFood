@@ -1,6 +1,10 @@
 package com.ssinitsa.training.culinary.webapp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class RatingModel {
+	
+	private Integer id;
 
 	private Integer userId;
 
@@ -50,6 +54,14 @@ public class RatingModel {
 
 	public void setVote(Integer vote) {
 		this.vote = vote;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

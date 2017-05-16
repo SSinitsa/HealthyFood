@@ -1,80 +1,297 @@
-16:00:18.779 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context-test.xml]
-16:00:18.888 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context.xml]
-16:00:18.935 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dao-context.xml]
-16:00:19.122 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
-16:00:19.122 [main] INFO  org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:19 MSK 2017]; root of context hierarchy
-16:00:19.278 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [db.properties]
-16:00:19.278 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [app.properties]
-16:00:19.294 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-16:00:19.621 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=331, name=Ingredient150787, calories=138, fats=4.97, proteins=1.93, carbohydrates=1.56, category=fruit]
-16:00:19.621 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=332, name=Ingredient928044, calories=138, fats=3.82, proteins=0.9, carbohydrates=2.26, category=fruit]
-16:00:19.777 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=331
-16:00:19.793 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=332
-16:00:19.794 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=333, name=Ingredient417460, calories=13, fats=2.22, proteins=3.99, carbohydrates=4.05, category=fruit]
-16:00:19.794 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=334, name=Ingredient276858, calories=48, fats=3.91, proteins=3.9, carbohydrates=0.18, category=fruit]
-16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=333
-16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=334
-16:00:19.887 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=335, name=Ingredient937475, calories=55, fats=2.26, proteins=4.63, carbohydrates=1.86, category=fruit]
-16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=336, name=Ingredient357404, calories=151, fats=3.81, proteins=3.88, carbohydrates=1.62, category=fruit]
-16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Update Ingredient: Ingredient [id=335, name=Updated ingredient, calories=52, fats=1.51, proteins=2.39, carbohydrates=4.09, category=vegetable]
-16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=335
-16:00:19.903 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=336
-16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=337, name=Ingredient260476, calories=95, fats=3.2, proteins=1.39, carbohydrates=0.22, category=fruit]
-16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=338, name=Ingredient787570, calories=81, fats=0.87, proteins=4.65, carbohydrates=3.75, category=fruit]
-16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=337
-16:00:19.919 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=338
-16:00:19.934 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=339, name=Ingredient894597, calories=10, fats=2.15, proteins=1.78, carbohydrates=3.63, category=fruit]
-16:00:19.934 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=340, name=Ingredient275959, calories=136, fats=1.87, proteins=4.35, carbohydrates=1.83, category=fruit]
-16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=339
-16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=340
-16:00:19.981 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=341, name=Ingredient252892, calories=182, fats=4.7, proteins=1.79, carbohydrates=0.3, category=fruit]
-16:00:19.997 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=342, name=Ingredient99359, calories=40, fats=0.85, proteins=1.73, carbohydrates=4.53, category=fruit]
-16:00:20.012 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=341
-16:00:20.028 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=342
-16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=343, name=Ingredient952257, calories=190, fats=1.35, proteins=0.58, carbohydrates=1.02, category=fruit]
-16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=344, name=Ingredient685509, calories=179, fats=0.99, proteins=4.66, carbohydrates=3.5, category=fruit]
-16:00:20.043 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=345, name=Ingredient166520, calories=72, fats=2.93, proteins=3.48, carbohydrates=3.14, category=fruit]
-16:00:20.075 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=343
-16:00:20.090 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=344
-16:00:20.106 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=345
-16:00:27.614 [main] INFO  org.springframework.test.context.TestContextManager - Could not instantiate TestExecutionListener class [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their dependencies) available.
-16:00:27.817 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context-test.xml]
-16:00:27.911 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [services-context.xml]
-16:00:27.958 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [dao-context.xml]
-16:00:28.129 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
-16:00:28.129 [main] INFO  org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:28 MSK 2017]; root of context hierarchy
-16:00:28.270 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [db.properties]
-16:00:28.285 [main] INFO  org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [app.properties]
-16:00:28.285 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-16:00:28.675 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=346, name=Ingredient690878, calories=188, fats=3.28, proteins=2.42, carbohydrates=1.38, category=fruit]
-16:00:28.693 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=347, name=Ingredient492897, calories=47, fats=0.39, proteins=2.83, carbohydrates=0.08, category=fruit]
-16:00:28.850 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=346
-16:00:28.850 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=347
-16:00:28.865 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=348, name=Ingredient4228, calories=159, fats=0.32, proteins=4.03, carbohydrates=3.68, category=fruit]
-16:00:28.865 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=349, name=Ingredient189271, calories=138, fats=0.74, proteins=4.31, carbohydrates=1.4, category=fruit]
-16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=348
-16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=349
-16:00:28.943 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=350, name=Ingredient869227, calories=32, fats=0.58, proteins=0.69, carbohydrates=1.78, category=fruit]
-16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=351, name=Ingredient274788, calories=127, fats=2.01, proteins=1.65, carbohydrates=0.16, category=fruit]
-16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Update Ingredient: Ingredient [id=350, name=Updated ingredient, calories=167, fats=0.39, proteins=0.18, carbohydrates=1.25, category=vegetable]
-16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=350
-16:00:28.959 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=351
-16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=352, name=Ingredient88934, calories=161, fats=4.37, proteins=1.32, carbohydrates=4.09, category=fruit]
-16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=353, name=Ingredient97631, calories=195, fats=0.45, proteins=3.3, carbohydrates=3.47, category=fruit]
-16:00:28.975 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=352
-16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=353
-16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=354, name=Ingredient169739, calories=195, fats=1.25, proteins=2.42, carbohydrates=3.5, category=fruit]
-16:00:28.990 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=355, name=Ingredient582921, calories=100, fats=3.5, proteins=1.41, carbohydrates=2.95, category=fruit]
-16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=354
-16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=355
-16:00:29.037 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=356, name=Ingredient525677, calories=44, fats=3.97, proteins=0.45, carbohydrates=4.45, category=fruit]
-16:00:29.053 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=357, name=Ingredient92761, calories=95, fats=2.19, proteins=2.92, carbohydrates=0.26, category=fruit]
-16:00:29.099 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=356
-16:00:29.099 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=357
-16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=358, name=Ingredient537678, calories=135, fats=4.33, proteins=0.52, carbohydrates=4.47, category=fruit]
-16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=359, name=Ingredient754910, calories=31, fats=3.19, proteins=1.11, carbohydrates=4.76, category=fruit]
-16:00:29.115 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Insert new Ingredient: Ingredient [id=360, name=Ingredient292576, calories=121, fats=2.62, proteins=4.94, carbohydrates=3.6, category=fruit]
-16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=358
-16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=359
-16:00:29.131 [main] INFO  com.ssinitsa.training.culinary.services.impl.IngredientServiceImpl - Delete Ingredient.id=360
-16:00:29.162 [Thread-1] INFO  org.springframework.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@6e2c9341: startup date [Sat May 06 16:00:28 MSK 2017]; root of context hierarchy
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25bbe1b6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5702b3b1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69ea3742, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b952a2d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3159c4b8]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10bdf5e5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6e1ec318, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e0b0338, org.springframework.test.context.transaction.TransactionalTestExecutionListener@617faa95, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1e127982]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5383967b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2ac273d3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71423665, org.springframework.test.context.transaction.TransactionalTestExecutionListener@20398b7c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fc6f14e]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f1fba17, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@185d8b6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67784306, org.springframework.test.context.transaction.TransactionalTestExecutionListener@335eadca, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@210366b4]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65e2dbf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4f970963, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61f8bee4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7b49cea0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@887af79]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:209 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2017-05-16 02:36:52 INFO  DefaultTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e6c3152, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@50b494a6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3cef309d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@32709393, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3d99d22e]
+2017-05-16 02:36:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [services-context-test.xml]
+2017-05-16 02:36:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [services-context.xml]
+2017-05-16 02:36:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [dao-context.xml]
+2017-05-16 02:36:53 INFO  DefaultListableBeanFactory:818 - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [dao-context.xml]] with [Generic bean: class [com.ssinitsa.training.culinary.dao.db.util.SchemaNameAwareBasicDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in class path resource [services-context-test.xml]]
+2017-05-16 02:36:53 INFO  GenericApplicationContext:581 - Refreshing org.springframework.context.support.GenericApplicationContext@2f943d71: startup date [Tue May 16 02:36:53 MSK 2017]; root of context hierarchy
+2017-05-16 02:36:53 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=jedisConnectionFactory,declaringClass=com.ssinitsa.training.culinary.dao.db.cache.AppConfig]: a definition for bean 'jedisConnectionFactory' already exists. This top-level bean definition is considered as an override.
+2017-05-16 02:36:53 INFO  ConfigurationClassBeanDefinitionReader:298 - Skipping bean definition for [BeanMethod:name=redisTemplate,declaringClass=com.ssinitsa.training.culinary.dao.db.cache.AppConfig]: a definition for bean 'redisTemplate' already exists. This top-level bean definition is considered as an override.
+2017-05-16 02:36:53 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [db.properties]
+2017-05-16 02:36:53 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [redis.properties]
+2017-05-16 02:36:53 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2017-05-16 02:36:53 INFO  AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2925, name=Ingredient539525, calories=89, fats=3.16, proteins=1.28, carbohydrates=1.78, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:115 - Ingredient orderByNameTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2925
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2926, name=Ingredient5703, calories=53, fats=0.73, proteins=2.61, carbohydrates=3.76, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:123 - Ingredient descendingOrderByCaloriesTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2926
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2927, name=Ingredient349601, calories=110, fats=4.37, proteins=4.96, carbohydrates=0.74, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:69 - Ingredient updateTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:41 - Update Ingredient: Ingredient [id=2927, name=Ingredient923162, calories=52, fats=2.3, proteins=2.37, carbohydrates=4.32, category=vegetable]
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2927
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2928, name=Ingredient95285, calories=34, fats=2.14, proteins=1.68, carbohydrates=0.17, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:50 - Ingredient getTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2928
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2929, name=Ingredient159457, calories=50, fats=4.63, proteins=4.74, carbohydrates=1.09, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:86 - Ingredient getAllTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2930, name=Ingredient575553, calories=151, fats=1.61, proteins=0.79, carbohydrates=2.55, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2929
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2930
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2931, name=Ingredient272898, calories=5, fats=0.69, proteins=3.68, carbohydrates=1.63, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:58 - Ingredient insertTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2932, name=Ingredient136890, calories=72, fats=3.71, proteins=0.33, carbohydrates=0.19, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2931
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2932
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2933, name=Ingredient870168, calories=173, fats=2.8, proteins=3.67, carbohydrates=0.65, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:105 - Ingredient getByCategoryTest, category = fruit
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2933
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2934, name=Ingredient632636, calories=90, fats=2.77, proteins=4.53, carbohydrates=0.8, category=fruit]
+2017-05-16 02:36:55 INFO  IngredientServiceTest:97 - Ingredient deleteTest
+2017-05-16 02:36:55 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2934
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3573, login=Login807939, password=91405653, registrated=2017-05-16 02:36:55.511, first_name=FName123132.7083206093, last_name=LName72025.22009819323, e-mail=E-mail829763.080494597, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:41 - Update user : User [id=3573, login=Login2484, password=65900839, registrated=2017-05-16 02:36:55.511, first_name=FName469893.93461990956, last_name=LName449082.7605046122, e-mail=E-mail427773.50521963544, role=admin]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3573
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3574, login=Login389390, password=95259328, registrated=2017-05-16 02:36:55.558, first_name=FName529608.6361189497, last_name=LName926514.5324739163, e-mail=E-mail434988.5734988128, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3574
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3575, login=Login626413, password=5899394, registrated=2017-05-16 02:36:55.574, first_name=FName214659.88061616736, last_name=LName259031.83164994704, e-mail=E-mail306275.22389854054, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3576, login=Login835143, password=93726481, registrated=2017-05-16 02:36:55.574, first_name=FName162726.22477778155, last_name=LName838095.3926874797, e-mail=E-mail9501.113805767347, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3575
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3576
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3577, login=Login460624, password=76800886, registrated=2017-05-16 02:36:55.667, first_name=FName580521.1349116557, last_name=LName344880.77369643, e-mail=E-mail942750.58672332, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3578, login=Login277309, password=60550977, registrated=2017-05-16 02:36:55.683, first_name=FName198753.28315554085, last_name=LName716767.0350021583, e-mail=E-mail656463.6304741547, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3577
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3578
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3579, login=Login103991, password=5243641, registrated=2017-05-16 02:36:55.714, first_name=FName526678.5708656583, last_name=LName399629.0440672823, e-mail=E-mail815860.675054706, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3579
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3580, login=Login872484, password=56610967, registrated=2017-05-16 02:36:55.73, first_name=FName203981.9657353239, last_name=LName42793.29911602503, e-mail=E-mail712627.8013437545, role=user]
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3580
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3581, login=Login587985, password=70719057, registrated=2017-05-16 02:36:55.771, first_name=FName947908.4295372395, last_name=LName742944.0897477395, e-mail=E-mail576763.2932377849, role=user]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2099, name=Recipe422088, description=Description398033, authorId=3581, created=2017-05-16 02:36:55.785, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:41 - Update recipe: Recipe [id=2099, name=Recipe327498, description=Description604705, authorId=3581, created=2017-05-16 02:36:55.785, category=breakfast, vegetarian=false]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2099
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3581
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3582, login=Login140673, password=56235385, registrated=2017-05-16 02:36:55.847, first_name=FName862530.9912723816, last_name=LName529815.4646791425, e-mail=E-mail373509.92760558653, role=user]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2100, name=Recipe845478, description=Description834313, authorId=3582, created=2017-05-16 02:36:55.847, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2100
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3582
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3583, login=Login135446, password=84078356, registrated=2017-05-16 02:36:55.879, first_name=FName503465.0675869805, last_name=LName959153.3889325601, e-mail=E-mail160217.9005129639, role=user]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2101, name=Recipe637742, description=Description468096, authorId=3583, created=2017-05-16 02:36:55.879, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2102, name=Recipe327546, description=Description421761, authorId=3583, created=2017-05-16 02:36:55.894, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2101
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2102
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3583
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3584, login=Login459913, password=48772813, registrated=2017-05-16 02:36:55.957, first_name=FName190354.75563285008, last_name=LName898955.9227258597, e-mail=E-mail192450.1703437631, role=user]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2103, name=Recipe682258, description=Description396899, authorId=3584, created=2017-05-16 02:36:55.957, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2104, name=Recipe204684, description=Description243162, authorId=3584, created=2017-05-16 02:36:55.957, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2103
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2104
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3584
+2017-05-16 02:36:55 INFO  UserServiceImpl:37 - Insert user : User [id=3585, login=Login5302, password=52323168, registrated=2017-05-16 02:36:55.972, first_name=FName354780.7239388069, last_name=LName230223.35585611465, e-mail=E-mail908395.7986899344, role=user]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2105, name=Recipe413375, description=Description118728, authorId=3585, created=2017-05-16 02:36:55.988, category=dessert, vegetarian=true]
+2017-05-16 02:36:55 INFO  RecipeServiceImpl:48 - Delete recipe.id=2105
+2017-05-16 02:36:55 INFO  UserServiceImpl:48 - Delete user.id=3585
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3586, login=Login23225, password=71006569, registrated=2017-05-16 02:36:56.003, first_name=FName197176.61149946507, last_name=LName523786.07048553403, e-mail=E-mail680239.9428648638, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2106, name=Recipe786873, description=Description845452, authorId=3586, created=2017-05-16 02:36:56.003, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2107, name=Recipe276614, description=Description523695, authorId=3586, created=2017-05-16 02:36:56.019, category=breakfast, vegetarian=true]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2106
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2107
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3586
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3587, login=Login724018, password=97647671, registrated=2017-05-16 02:36:56.081, first_name=FName965110.3116267398, last_name=LName454346.5371963208, e-mail=E-mail989879.0817298542, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2108, name=Recipe937365, description=Description908016, authorId=3587, created=2017-05-16 02:36:56.081, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2935, name=Ingredient615314, calories=106, fats=0.75, proteins=2.16, carbohydrates=3.44, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1170, recipe_id=2108, ingredient_id=2935, quantity=465]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2936, name=Ingredient331548, calories=33, fats=2.1, proteins=1.96, carbohydrates=2.42, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1171, recipe_id=2108, ingredient_id=2936, quantity=344]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1170
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1171
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2935
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2936
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2108
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3587
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3588, login=Login489294, password=91697042, registrated=2017-05-16 02:36:56.16, first_name=FName467264.14925757353, last_name=LName461651.98984427034, e-mail=E-mail405008.6168000895, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2109, name=Recipe435960, description=Description586465, authorId=3588, created=2017-05-16 02:36:56.16, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2937, name=Ingredient529432, calories=196, fats=2.81, proteins=4.19, carbohydrates=4.74, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1172, recipe_id=2109, ingredient_id=2937, quantity=434]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2938, name=Ingredient893782, calories=78, fats=0.9, proteins=3.24, carbohydrates=2.39, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1173, recipe_id=2109, ingredient_id=2938, quantity=217]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1172
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1173
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2937
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2938
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2109
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3588
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3589, login=Login6405, password=44882605, registrated=2017-05-16 02:36:56.241, first_name=FName101221.17964751343, last_name=LName713489.4959071719, e-mail=E-mail647110.2882867907, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2110, name=Recipe219014, description=Description594288, authorId=3589, created=2017-05-16 02:36:56.241, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2939, name=Ingredient976017, calories=170, fats=2.83, proteins=1.17, carbohydrates=0.44, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1174, recipe_id=2110, ingredient_id=2939, quantity=341]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2940, name=Ingredient701254, calories=119, fats=3.58, proteins=3.13, carbohydrates=4.66, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1175, recipe_id=2110, ingredient_id=2940, quantity=468]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1174
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1175
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2939
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2940
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2110
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3589
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3590, login=Login352681, password=40124649, registrated=2017-05-16 02:36:56.428, first_name=FName229193.3575960945, last_name=LName338243.096083506, e-mail=E-mail966548.7638159883, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2111, name=Recipe590633, description=Description521098, authorId=3590, created=2017-05-16 02:36:56.444, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2941, name=Ingredient267256, calories=133, fats=3.8, proteins=4.06, carbohydrates=1.28, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1176, recipe_id=2111, ingredient_id=2941, quantity=310]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2942, name=Ingredient270015, calories=130, fats=3.2, proteins=4.7, carbohydrates=2.0, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:40 - Update details: RecipeDetails [id=1176, recipe_id=2111, ingredient_id=2942, quantity=113]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1176
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2941
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2942
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2111
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3590
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3591, login=Login72473, password=28619604, registrated=2017-05-16 02:36:56.507, first_name=FName676750.9448847818, last_name=LName82263.19386516356, e-mail=E-mail696166.7429426148, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2112, name=Recipe876161, description=Description594400, authorId=3591, created=2017-05-16 02:36:56.507, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2943, name=Ingredient584658, calories=71, fats=4.18, proteins=4.85, carbohydrates=1.16, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1177, recipe_id=2112, ingredient_id=2943, quantity=132]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2944, name=Ingredient72245, calories=54, fats=1.68, proteins=3.83, carbohydrates=2.49, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1178, recipe_id=2112, ingredient_id=2944, quantity=84]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:108 - Delete all details from recipe.id=2112
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2943
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2944
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2112
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3591
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3592, login=Login971920, password=84889961, registrated=2017-05-16 02:36:56.554, first_name=FName898746.6065723889, last_name=LName382443.5649080324, e-mail=E-mail731768.1186166853, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2113, name=Recipe936116, description=Description763497, authorId=3592, created=2017-05-16 02:36:56.569, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2945, name=Ingredient765499, calories=116, fats=1.59, proteins=0.56, carbohydrates=0.23, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1179, recipe_id=2113, ingredient_id=2945, quantity=5]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1179
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2945
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2113
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3592
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3593, login=Login442804, password=75055540, registrated=2017-05-16 02:36:56.601, first_name=FName387506.6591520723, last_name=LName795392.6815030003, e-mail=E-mail716736.1171599495, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2114, name=Recipe399611, description=Description295617, authorId=3593, created=2017-05-16 02:36:56.601, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2946, name=Ingredient845169, calories=55, fats=4.03, proteins=4.14, carbohydrates=0.43, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1180, recipe_id=2114, ingredient_id=2946, quantity=188]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1181, recipe_id=2114, ingredient_id=2946, quantity=165]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1180
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1181
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2946
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2114
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3593
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3594, login=Login325511, password=79186859, registrated=2017-05-16 02:36:56.647, first_name=FName688291.4473420572, last_name=LName463686.76909810555, e-mail=E-mail91757.09443950186, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2115, name=Recipe543357, description=Description765197, authorId=3594, created=2017-05-16 02:36:56.647, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:38 - Insert new Ingredient: Ingredient [id=2947, name=Ingredient396001, calories=107, fats=3.94, proteins=2.24, carbohydrates=0.36, category=fruit]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:37 - Add new details: RecipeDetails [id=1182, recipe_id=2115, ingredient_id=2947, quantity=152]
+2017-05-16 02:36:56 INFO  RecipeDetailsServiceImpl:47 - Delete recipeDetails.id=: 1182
+2017-05-16 02:36:56 INFO  IngredientServiceImpl:48 - Delete Ingredient.id=2947
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2115
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3594
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3595, login=Login48074, password=71653884, registrated=2017-05-16 02:36:56.679, first_name=FName117738.1957460697, last_name=LName838080.0159103094, e-mail=E-mail949056.1139509979, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2116, name=Recipe804752, description=Description676281, authorId=3595, created=2017-05-16 02:36:56.694, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3596, login=Login601413, password=58174732, registrated=2017-05-16 02:36:56.71, first_name=FName14033.412079206386, last_name=LName420417.08684832114, e-mail=E-mail967665.3048185923, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=483 text=Text196070 for Recipe.id=2116 from User.id=3596
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:43 - Update Feedback.id=483 text=updated text for Recipe.id=2116 by User.id=3596
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id483
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3596
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2116
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3595
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3597, login=Login710975, password=99965057, registrated=2017-05-16 02:36:56.741, first_name=FName359328.50257286517, last_name=LName855034.8339676546, e-mail=E-mail460829.177574297, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2117, name=Recipe727105, description=Description789191, authorId=3597, created=2017-05-16 02:36:56.757, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3598, login=Login475311, password=10800953, registrated=2017-05-16 02:36:56.757, first_name=FName580120.0233709839, last_name=LName385426.65846519574, e-mail=E-mail629930.5311745589, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=484 text=Text886736 for Recipe.id=2117 from User.id=3598
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id484
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3598
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2117
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3597
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3599, login=Login485616, password=83384893, registrated=2017-05-16 02:36:56.772, first_name=FName595165.6169779577, last_name=LName321469.6960351645, e-mail=E-mail421639.62701330107, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2118, name=Recipe925228, description=Description386409, authorId=3599, created=2017-05-16 02:36:56.788, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3600, login=Login759827, password=8230115, registrated=2017-05-16 02:36:56.788, first_name=FName556700.3918320119, last_name=LName946747.8812105961, e-mail=E-mail869928.3418618819, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=485 text=Text725405 for Recipe.id=2118 from User.id=3600
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=486 text=Text603674 for Recipe.id=2118 from User.id=3600
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id485
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id486
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3600
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2118
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3599
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3601, login=Login227170, password=32959447, registrated=2017-05-16 02:36:56.835, first_name=FName350386.8755381687, last_name=LName52296.36488247613, e-mail=E-mail628771.4619118713, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2119, name=Recipe236639, description=Description538729, authorId=3601, created=2017-05-16 02:36:56.835, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3602, login=Login662381, password=16501348, registrated=2017-05-16 02:36:56.835, first_name=FName477435.5759592825, last_name=LName129884.90384214201, e-mail=E-mail216890.29892050792, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=487 text=Text746058 for Recipe.id=2119 from User.id=3602
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3603, login=Login405241, password=40274929, registrated=2017-05-16 02:36:56.835, first_name=FName106382.19069945332, last_name=LName187369.5061527859, e-mail=E-mail700269.4760884739, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=488 text=Text586109 for Recipe.id=2119 from User.id=3603
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id487
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id488
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3602
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3603
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2119
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3601
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3604, login=Login595527, password=90122986, registrated=2017-05-16 02:36:56.866, first_name=FName210219.81191128146, last_name=LName331008.0515243586, e-mail=E-mail623634.0544082047, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2120, name=Recipe742529, description=Description903040, authorId=3604, created=2017-05-16 02:36:56.866, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3605, login=Login243828, password=40228844, registrated=2017-05-16 02:36:56.881, first_name=FName149099.9304046051, last_name=LName802903.824117161, e-mail=E-mail700941.1676393854, role=user]
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:39 - Add new Feedback.id=489 text=Text390572 for Recipe.id=2120 from User.id=3605
+2017-05-16 02:36:56 INFO  FeedbackServiceImpl:51 - Delete Feedback.id489
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3605
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:48 - Delete recipe.id=2120
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3604
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3606, login=Login542091, password=92590929, registrated=2017-05-16 02:36:56.913, first_name=FName944092.933596949, last_name=LName451976.7010893199, e-mail=E-mail933313.0689555967, role=user]
+2017-05-16 02:36:56 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2121, name=Recipe783792, description=Description890293, authorId=3606, created=2017-05-16 02:36:56.913, category=dessert, vegetarian=true]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3607, login=Login126993, password=82416716, registrated=2017-05-16 02:36:56.959, first_name=FName981898.8017571168, last_name=LName180749.62911203652, e-mail=E-mail991517.3403608846, role=user]
+2017-05-16 02:36:56 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=758, userId=3607, recipeId=2121, vote=4]
+2017-05-16 02:36:56 INFO  UserServiceImpl:37 - Insert user : User [id=3608, login=Login801973, password=74050145, registrated=2017-05-16 02:36:56.975, first_name=FName13549.542006666692, last_name=LName471867.9131318344, e-mail=E-mail430790.45120768534, role=user]
+2017-05-16 02:36:56 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=759, userId=3608, recipeId=2121, vote=3]
+2017-05-16 02:36:56 INFO  RatingServiceImpl:51 - Delete Vote.id=758
+2017-05-16 02:36:56 INFO  RatingServiceImpl:51 - Delete Vote.id=759
+2017-05-16 02:36:56 INFO  UserServiceImpl:48 - Delete user.id=3607
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3608
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2121
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3606
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3609, login=Login669362, password=73122422, registrated=2017-05-16 02:36:57.021, first_name=FName672435.0249934404, last_name=LName179077.11943214244, e-mail=E-mail335128.00352873985, role=user]
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2122, name=Recipe631612, description=Description565038, authorId=3609, created=2017-05-16 02:36:57.024, category=dessert, vegetarian=true]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3610, login=Login85919, password=13117557, registrated=2017-05-16 02:36:57.027, first_name=FName898040.820716604, last_name=LName312032.2707052972, e-mail=E-mail583012.4968561332, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=760, userId=3610, recipeId=2122, vote=4]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3611, login=Login725783, password=33349232, registrated=2017-05-16 02:36:57.032, first_name=FName241251.8222348926, last_name=LName980079.8180066018, e-mail=E-mail468879.02697581786, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=761, userId=3611, recipeId=2122, vote=1]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=760
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=761
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3610
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3611
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2122
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3609
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3612, login=Login715248, password=4189144, registrated=2017-05-16 02:36:57.064, first_name=FName4254.128095410148, last_name=LName178703.51092164326, e-mail=E-mail50058.938627133175, role=user]
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2123, name=Recipe89750, description=Description126599, authorId=3612, created=2017-05-16 02:36:57.064, category=dessert, vegetarian=true]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3613, login=Login78130, password=31623241, registrated=2017-05-16 02:36:57.064, first_name=FName486601.194008197, last_name=LName29341.930567800766, e-mail=E-mail413602.33912993316, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=762, userId=3613, recipeId=2123, vote=1]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:44 - Update Vote: Rating [id=762, userId=3613, recipeId=2123, vote=2]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=762
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3613
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2123
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3612
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3614, login=Login508630, password=78346824, registrated=2017-05-16 02:36:57.096, first_name=FName198358.5198388157, last_name=LName682596.3673753222, e-mail=E-mail165889.12246526478, role=user]
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2124, name=Recipe738687, description=Description813321, authorId=3614, created=2017-05-16 02:36:57.111, category=dessert, vegetarian=true]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3615, login=Login716913, password=44355989, registrated=2017-05-16 02:36:57.111, first_name=FName940333.8705194993, last_name=LName990268.537910572, e-mail=E-mail814989.8056899814, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=763, userId=3615, recipeId=2124, vote=4]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=763
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3615
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2124
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3614
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3616, login=Login980619, password=34795272, registrated=2017-05-16 02:36:57.174, first_name=FName759107.7043316953, last_name=LName61082.34300656345, e-mail=E-mail184301.9162376901, role=user]
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2125, name=Recipe127577, description=Description967095, authorId=3616, created=2017-05-16 02:36:57.174, category=dessert, vegetarian=true]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3617, login=Login451067, password=66651091, registrated=2017-05-16 02:36:57.174, first_name=FName232009.19846900713, last_name=LName441608.0775874487, e-mail=E-mail94730.78370666855, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=764, userId=3617, recipeId=2125, vote=3]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=765, userId=3617, recipeId=2125, vote=3]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=764
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=765
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3617
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2125
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3616
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3618, login=Login677859, password=69490160, registrated=2017-05-16 02:36:57.22, first_name=FName934687.9326815271, last_name=LName716388.1201520069, e-mail=E-mail907883.2932016279, role=user]
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:38 - Add new recipe: Recipe [id=2126, name=Recipe496558, description=Description74934, authorId=3618, created=2017-05-16 02:36:57.22, category=dessert, vegetarian=true]
+2017-05-16 02:36:57 INFO  UserServiceImpl:37 - Insert user : User [id=3619, login=Login488762, password=61897274, registrated=2017-05-16 02:36:57.22, first_name=FName874336.9039043273, last_name=LName970389.1176001613, e-mail=E-mail298601.5704355377, role=user]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:41 - Add new Vote: Rating [id=766, userId=3619, recipeId=2126, vote=2]
+2017-05-16 02:36:57 INFO  RatingServiceImpl:51 - Delete Vote.id=766
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3619
+2017-05-16 02:36:57 INFO  RecipeServiceImpl:48 - Delete recipe.id=2126
+2017-05-16 02:36:57 INFO  UserServiceImpl:48 - Delete user.id=3618
+2017-05-16 02:36:57 INFO  GenericApplicationContext:982 - Closing org.springframework.context.support.GenericApplicationContext@2f943d71: startup date [Tue May 16 02:36:53 MSK 2017]; root of context hierarchy

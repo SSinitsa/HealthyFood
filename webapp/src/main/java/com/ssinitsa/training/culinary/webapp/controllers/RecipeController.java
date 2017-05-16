@@ -21,6 +21,8 @@ import com.ssinitsa.training.culinary.datamodel.Recipe;
 import com.ssinitsa.training.culinary.services.IRecipeDetailsService;
 import com.ssinitsa.training.culinary.services.IRecipeService;
 import com.ssinitsa.training.culinary.services.IUserService;
+import com.ssinitsa.training.culinary.webapp.converters.Recipe2RecipeModel;
+import com.ssinitsa.training.culinary.webapp.converters.RecipeModel2Recipe;
 import com.ssinitsa.training.culinary.webapp.models.IdModel;
 import com.ssinitsa.training.culinary.webapp.models.RecipeModel;
 
@@ -36,6 +38,12 @@ public class RecipeController {
 	
 	@Inject
 	private IRecipeDetailsService recipeDetailService;
+	
+	@Inject
+	private Recipe2RecipeModel entityConverter;
+	
+	@Inject
+	private RecipeModel2Recipe modelConverter;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<?> getAll(@RequestParam(required = false) Integer author, String category, Boolean vegetarian,
@@ -49,7 +57,9 @@ public class RecipeController {
 		allRecipes = recipeService.search(filter);
 		List<RecipeModel> convertedRecipes = new ArrayList<>();
 		for (Recipe recipe : allRecipes) {
-			convertedRecipes.add(entity2model(recipe));
+			RecipeModel convertingRecipe = entityConverter.recipe2recipeModel(recipe);
+			convertingRecipe.setAuthor(userService.get(convertingRecipe.getAuthorId()).getLogin());
+			convertedRecipes.add(convertingRecipe);
 		}
 		if (from != null || to != null) {
 			convertedRecipes = caloryFilter(convertedRecipes, from, to);
@@ -84,43 +94,23 @@ public class RecipeController {
 		return filteredRecipes;
 	}
 
-	private RecipeModel entity2model(Recipe recipe) {
-		RecipeModel recipeModel = new RecipeModel();
-		recipeModel.setId(recipe.getId());
-		recipeModel.setName(recipe.getName());
-		recipeModel.setDescription(recipe.getDescription());
-		recipeModel.setAuthorId(recipe.getAuthorId());
-		recipeModel.setAuthor(userService.get(recipeModel.getAuthorId()).getLogin());
-		recipeModel.setCreated(recipe.getCreated());
-		recipeModel.setCategory(recipe.getCategory());
-		recipeModel.setVegetarian(recipe.isVegetarian());
-		return recipeModel;
-	}
-
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> getById(@PathVariable(value = "id") Integer ingredientIdParam) {
 		Recipe recipe = recipeService.get(ingredientIdParam);
-		RecipeModel recipeModel = entity2model(recipe);
+		RecipeModel recipeModel = entityConverter.recipe2recipeModel(recipe);
+		recipeModel.setAuthor(userService.get(recipeModel.getAuthorId()).getLogin());
+		System.out.println(recipeModel);
 		return new ResponseEntity<RecipeModel>(recipeModel, HttpStatus.OK);
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<?> createRecipe(@RequestBody RecipeModel recipeModel) {
-		Recipe recipe = model2entity(recipeModel);
+		Recipe recipe = modelConverter.recipeModel2recipe(recipeModel);
+		recipe.setCreated(new Timestamp(new Date().getTime()));
 		recipeService.save(recipe);
 		return new ResponseEntity<IdModel>(new IdModel(recipe.getId()), HttpStatus.CREATED);
 	}
 
-	private Recipe model2entity(RecipeModel recipeModel) {
-		Recipe recipe = new Recipe();
-		recipe.setName(recipeModel.getName());
-		recipe.setAuthorId(recipeModel.getAuthorId());
-		recipe.setDescription(recipeModel.getDescription());
-		recipe.setCreated(new Timestamp(new Date().getTime()));
-		recipe.setCategory(recipeModel.getCategory());
-		recipe.setVegetarian(recipeModel.isVegetarian());
-		return recipe;
-	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<?> updateRecipe(@RequestBody RecipeModel recipeModel,
@@ -128,7 +118,7 @@ public class RecipeController {
 		Recipe recipe = recipeService.get(ingredientIdParam);
 		recipe.setName(recipeModel.getName());
 		recipe.setDescription(recipeModel.getDescription());
-		recipe.setAuthorId(recipeModel.getAuthorId());
+		//recipe.setAuthorId(recipeModel.getAuthorId());
 		recipe.setCategory(recipeModel.getCategory());
 		recipe.setVegetarian(recipeModel.isVegetarian());
 		recipeService.save(recipe);

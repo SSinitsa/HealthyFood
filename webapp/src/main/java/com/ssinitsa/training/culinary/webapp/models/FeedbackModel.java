@@ -2,7 +2,11 @@ package com.ssinitsa.training.culinary.webapp.models;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class FeedbackModel {
+	
+	private Integer id; 
 
 	private String text;
 
@@ -72,6 +76,14 @@ public class FeedbackModel {
 
 	public void setRecipeId(Integer recipeId) {
 		this.recipeId = recipeId;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

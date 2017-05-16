@@ -1,6 +1,10 @@
 package com.ssinitsa.training.culinary.webapp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class RecipeDetailsModel {
+	
+	private Integer id;
 
 	private Integer recipeId;
 
@@ -9,7 +13,7 @@ public class RecipeDetailsModel {
 	private Integer authorId;
 
 	private String author;
-
+	
 	private Integer ingredientId;
 
 	private String ingredient;

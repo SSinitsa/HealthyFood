@@ -2,9 +2,7 @@ package com.ssinitsa.training.culinary.datamodel;
 
 import java.sql.Timestamp;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class User {
 	
@@ -13,7 +11,7 @@ public class User {
 	private String login;
 	
 	private String password;
-	
+	@JsonIgnore
 	private Timestamp registrated;
 	
 	private String firstName;
@@ -21,7 +19,7 @@ public class User {
 	private String lastName;
 	
 	private String email;
-	
+	@JsonIgnore
 	private UserRole role;
 
 	public Integer getId() {
@@ -158,6 +156,23 @@ public class User {
 		if (role != other.role)
 			return false;
 		return true;
+	}
+
+	public User(Integer id, String login, String password, Timestamp registrated, String firstName, String lastName,
+			String email, UserRole role) {
+		super();
+		this.id = id;
+		this.login = login;
+		this.password = password;
+		this.registrated = registrated;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.role = role;
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	

@@ -1,6 +1,7 @@
 package com.ssinitsa.training.culinary.datamodel;
 
 public class Ingredient {
+	
 	private Integer id;
 	private String name;
 	private Integer calories;
@@ -8,6 +9,22 @@ public class Ingredient {
 	private Double proteins;
 	private Double carbohydrates;
 	private IngredientCategory category;
+	
+
+	public Ingredient(Integer id, String name, Integer calories, Double fats, Double proteins, Double carbohydrates,
+			IngredientCategory category) {
+		this.id = id;
+		this.name = name;
+		this.calories = calories;
+		this.fats = fats;
+		this.proteins = proteins;
+		this.carbohydrates = carbohydrates;
+		this.category = category;
+	}
+
+	public Ingredient() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;

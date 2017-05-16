@@ -7,6 +7,18 @@ public class Rating {
 	private Integer recipeId;
 	private Integer vote;
 
+	public Rating(Integer id, Integer userId, Integer recipeId, Integer vote) {
+		super();
+		this.id = id;
+		this.userId = userId;
+		this.recipeId = recipeId;
+		this.vote = vote;
+	}
+
+	public Rating() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getId() {
 		return id;
 	}

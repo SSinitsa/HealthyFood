@@ -20,4 +20,9 @@ public interface IUserService {
 	@Transactional
 	void delete(Integer id);
 	
+	User authentification (String login, String password);
+	
+	@Transactional
+	void registration (User user);
+	
 }

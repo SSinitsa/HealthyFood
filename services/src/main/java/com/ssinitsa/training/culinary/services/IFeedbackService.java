@@ -14,8 +14,6 @@ public interface IFeedbackService {
 	@Transactional
 	void save(Feedback feedback);
 
-	//List<Feedback> getAll();
-	
 	@Transactional
 	void delete(Integer id);
 

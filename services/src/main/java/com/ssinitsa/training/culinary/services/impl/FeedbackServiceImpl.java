@@ -34,7 +34,6 @@ public class FeedbackServiceImpl implements IFeedbackService {
 	@Override
 	public void save(Feedback feedback) {
 		if (feedback.getId() == null) {
-			System.out.println("Insert new Feedback");
 			feedbackDao.insert(feedback);
 			LOGGER.info("Add new Feedback.id={} text={} for Recipe.id={} from User.id={}", feedback.getId(),
 					feedback.getText(), feedback.getRecipeId(), feedback.getUserId());
